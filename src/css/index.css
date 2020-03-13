@@ -1,0 +1,147 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.wrapper{
+    margin: 0 auto;
+    width: 800px;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.background{
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    background-image: url(../../images/bg.png);
+    background-size: 25% 100%;
+    left: 0px;
+}
+
+.ground{
+    position: absolute;
+    width: 200%;
+    height: 20%;
+    background-image: url(../../images/ground.png);
+    background-size: 25% 100%;
+    bottom: 0px;
+    left: 0px;
+}
+
+.tips{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: 25%;
+    top: 10%;
+    z-index: 1;
+}
+
+.logo{
+    width: 44%;
+    height: 14%;
+    background-image: url(../../images/pipe.png);
+    background-repeat: no-repeat;
+    background-position: -278px -0px; 
+    background-size: 600px 700px;
+    margin: 10px auto; 
+
+}
+
+.tips-title{
+    width: 70%;
+    height: 25%;
+    background-image: url(../../images/pipe.png);
+    background-repeat: no-repeat;
+    background-position: -305px -216px; 
+    background-size: 1200px 1400px;
+    margin: 0 auto;
+}
+
+.tips-contents{
+    height: 85%;
+}
+
+.start{
+    width: 41%;
+    height: 18%;
+    background-image: url(../../images/pipe.png);
+    background-repeat: no-repeat;
+    background-position: -268px -180px; 
+    background-size: 1200px 800px;
+    margin: 0 auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.start::after{
+    position: absolute;
+    display: inline-block;
+    content: '';
+    width: 46px;
+    height: 50px;
+    background-image: url(../../images/pipe.png);
+    background-repeat: no-repeat;
+    background-position: -505px -60px; 
+    background-size: 1200px 800px;
+    margin: 0 auto;
+    bottom: -50px;
+    left: 50px;
+    animation: 2000ms twinkling infinite
+}
+
+@keyframes twinkling{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.bird{
+    position: absolute;
+    width: 40px;
+    height: 22px;
+    z-index: 2;
+    background-image: url(../../images/pipe.png);
+    background-repeat: no-repeat;
+    background-size: 1000px 800px;
+    left: 200px;
+    top: 100px;
+}
+
+
+.bird.swing1{
+    background-position: -330px 0px; 
+}
+
+.bird.swing2{
+    background-position: -330px -25px; 
+}
+
+.bird.swing3{
+    background-position: -330px -50px; 
+}
+
+
+.pipeDown,.pipeUp{
+    position: absolute;
+    width:130px;
+    height: 200px;
+    bottom: 20%;
+    left: 670px;
+    z-index: 2;
+    background-image: url(../../images/pipe.png);
+    background-size: 2000px 2000px;
+    background-position: -8px -466px;
+}
+
+.pipeUp{
+    top: 0px;
+    bottom: auto;
+    background-position: -8px -466px;
+    transform: rotate(180deg)
+}
